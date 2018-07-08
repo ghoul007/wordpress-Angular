@@ -1,3 +1,12 @@
 <p>
   posts works!
 </p>
+
+
+<ul>
+<li *ngFor="let post of posts">
+  <h3 [innerHTML]="post.title.rendered" ></h3>
+  <p [innerHTML]="post.content.rendered" ></p> 
+  <button class="btn btn-info" (click)="singlePost(post.id)">Read More</button>
+</li>
+</ul>
